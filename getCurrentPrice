@@ -1,0 +1,5 @@
+function [price] =  getCurrentPrice()
+priceData = urlread('https://blockchain.info/ticker');
+splitData = strsplit(priceData);
+price = str2double(splitData(13));
+end
