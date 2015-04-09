@@ -1,0 +1,26 @@
+function [totalScore] = keyCompareF(url)
+% keyCompare.m
+% The function keyCompare, using the 
+% inputs of keyGenerate to compare each 
+% word in the article to the key. It works by 
+% looking at each word, and checking how many are in the key.
+% We will hand paste an article into this program
+% Returns one number that is the magnitude of how positive/negative it is
+
+words = strsplit(url);
+reps = length(words);
+goodScore = 0;
+badScore = 0;
+
+for i = 1:reps
+    if strcmp(words(i), 'good') 
+                       %replace good with various pos. words
+        goodScore = goodScore +1;
+    elseif strcmp(words(i),'bad')
+                       %replace bad with various neg. words
+        badScore = badScore +1;
+    end 
+end
+
+disp(['Good: ',num2str(goodScore)]);
+disp(['Bad: ',num2str(badScore)]);
