@@ -5,5 +5,6 @@ function [article_cellarray,numWords] = str2array(article_string)
 article_cellarray=strsplit(article_string,' ');
 numWords=length(article_cellarray);
 
+for 
     
  
