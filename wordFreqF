@@ -1,0 +1,33 @@
+function [totalScore] = wordFreqF(extractedArticle)
+% keyCompare.m
+% Generates the total frequency of each word in an article. 
+% Deletes , . ? ! " ) from the back of a word if present.
+% Deletes " ( from the front of a word if present. 
+% Careful, if a word appears more than once, it shows up in
+% the display more than once (eg. if a word appears twice, it shows
+% up in the display twice). So, you should only look at words
+% with more than "1" frequency the first time. 
+
+words = strsplit(lower(extractedArticle));
+reps = length(words);
+count = zeros(1,reps);
+for j = 1:reps
+    if strcmp((words{j}(end)),'.') || strcmp((words{j}(end)),',') || strcmp((words{j}(end)),';') || strcmp((words{j}(end)),'?') || strcmp((words{j}(end)),'!') || strcmp((words{j}(end)),':') || strcmp((words{j}(end)),')') || strcmp((words{j}(end)),'%') || strcmp((words{j}(end)),'"')
+        words{j} = words{j}(1:end-1);
+    end
+    if strcmp((words{j}(1)),'(') || strcmp((words{j}(1)),'"')
+        words{j} = words{j}(2:end);
+    end
+end
+
+key = containers.Map(words,count);
+
+
+for i = 1:reps
+    
+    key(words{i}) = key(words{i}) + 1;
+end
+
+for m = 1:reps
+    disp([words{m}, ': ',num2str(key(words{m}))]);
+end
