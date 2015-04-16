@@ -27,7 +27,21 @@ for i = 1:reps
     
     key(words{i}) = key(words{i}) + 1;
 end
+for m = 1:reps
+  if key(words{m}) == 1
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
 
 for m = 1:reps
-    disp([words{m}, ': ',num2str(key(words{m}))]);
+  if key(words{m}) == 2
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
 end
+
+for m = 1:reps
+  if key(words{m}) == 3
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
