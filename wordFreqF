@@ -26,6 +26,180 @@ for i = 1:reps
 end
 
 for m = 1:reps
+  if key(words{m}) >= 50
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 49
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 48
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 47
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 46
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 45
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 44
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 43
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 42
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 41
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 40
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 39
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 38
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 37
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 36
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 35
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 34
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 33
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 32
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 31
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 30
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 29
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 28
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 27
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 26
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 25
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 24
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 23
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 22
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
   if key(words{m}) == 21
       disp([words{m}, ': ',num2str(key(words{m}))]);
   end
