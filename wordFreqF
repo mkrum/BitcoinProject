@@ -1,8 +1,6 @@
 function [totalScore] = wordFreqF(extractedArticle)
-% keyCompare.m
+% wordFreq.m
 % Generates the total frequency of each word in an article. 
-% Deletes , . ? ! " ) from the back of a word if present.
-% Deletes " ( from the front of a word if present. 
 % Careful, if a word appears more than once, it shows up in
 % the display more than once (eg. if a word appears twice, it shows
 % up in the display twice). So, you should only look at words
@@ -24,11 +22,119 @@ key = containers.Map(words,count);
 
 
 for i = 1:reps
-    
     key(words{i}) = key(words{i}) + 1;
 end
+
 for m = 1:reps
-  if key(words{m}) == 1
+  if key(words{m}) == 21
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 20
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 19
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 18
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 17
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 16
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 15
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 14
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 13
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 12
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 11
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 10
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 9
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 8
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 7
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 6
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 5
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 4
+      disp([words{m}, ': ',num2str(key(words{m}))]);
+  end
+end
+
+for m = 1:reps
+  if key(words{m}) == 3
       disp([words{m}, ': ',num2str(key(words{m}))]);
   end
 end
@@ -40,8 +146,7 @@ for m = 1:reps
 end
 
 for m = 1:reps
-  if key(words{m}) == 3
+  if key(words{m}) == 1
       disp([words{m}, ': ',num2str(key(words{m}))]);
   end
 end
-
