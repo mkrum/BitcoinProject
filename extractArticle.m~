@@ -1,7 +1,6 @@
 function x=extractArticle(yo)
     % intakes the url of a page that has a news article and returns the
-    % article as a string along with some other superfluous javascript code
-    % but no html tags
+    % article as a string
 y=webread(yo);
 pattern='</?.*?>';
 almost_article=regexprep(y,pattern,'');
