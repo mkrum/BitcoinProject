@@ -1,0 +1,6 @@
+text = fileread('hold.rtf');
+urls = getUrlsSource(text);
+fileID = fopen('BitcoinUrls.txt','a');
+fprintf(fileID,'%s\n',urls{:});
+fprintf(fileID, '%s\n', '*');
+fclose(fileID);
