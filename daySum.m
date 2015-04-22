@@ -1,4 +1,4 @@
-function [dayRating] = daySum(urls, PositiveKey, NegativeKey)
+function [dayRating] = daySum(day, links, PositiveKey, NegativeKey)
 
 % function [dayRating] = daySum(urls, ArticleBody)
 % Creates the rating for the day for use in createField.
@@ -7,13 +7,13 @@ function [dayRating] = daySum(urls, PositiveKey, NegativeKey)
 
 %% Set Parameters
 
-numRun = length(urls);
+numRun = length(links(day));
 score = 0;
 
 %% Run for all urls
 
 for i = 1:numRun
-    % Insert function to return ArticleBody
+    ArticleBody = extractArticle(links{1}{i});
     a = keyCompare(PositiveKey, NegativeKey, ArticleBody);
     score = score + a;
 end
