@@ -7,13 +7,13 @@ function [dayRating] = daySum(day, links, PositiveKey, NegativeKey)
 
 %% Set Parameters
 
-numRun = length(links(day));
+numRun = length(links{day});
 score = 0;
 
 %% Run for all urls
 
 for i = 1:numRun
-    ArticleBody = extractArticle(links{1}{i});
+    ArticleBody = extractArticle(links{day}{i});
     a = keyCompare(PositiveKey, NegativeKey, ArticleBody);
     score = score + a;
 end
