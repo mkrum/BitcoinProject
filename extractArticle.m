@@ -1,8 +1,14 @@
 function x=extractArticle(yo)
-    % intakes the url of a page that has a news article and returns the
-    % article as a string along with some other superfluous javascript code
-    % but no html tags
-y=webread(yo);
+parpool('open', 2);
+options.Timeout = 60;
+if length(yo) > 5
+    y = webread(yo);
+end
+
+
+        
+
+
 pattern='</?.*?>';
 almost_article=regexprep(y,pattern,'');
 next_pattern='(?window.*\+\+r';
