@@ -1,12 +1,8 @@
 function x=extractArticle(yo)
-parpool('open', 2);
-options.Timeout = 60;
+
 if length(yo) > 5
-    y = webread(yo);
+        y = webread(yo);
 end
-
-
-        
 
 
 pattern='</?.*?>';
