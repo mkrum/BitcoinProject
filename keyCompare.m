@@ -1,10 +1,12 @@
-function rating = keyCompare(PositiveKey, NegativeKey, ArticleBody)
+function rating = keyCompare(PositiveKey, NegativeKey, Link)
 
-% function rating = keyCompare(PositiveKey, NegativeKey, ArticleBody)
+% function rating = keyCompare(PositiveKey, NegativeKey, Link)
 % Takes the body of the article and returns whether the article is positive
 % or negative.
 
 %% Set Parameters
+
+ArticleBody = strsplit(extractArticle(Link));
 
 lengthPositiveKey = length(PositiveKey);
 lengthNegativeKey = length(NegativeKey);  % Length of keys for use in for loop.
@@ -22,7 +24,7 @@ negativeCount = 0;
 
 for i = 1:lengthBody
     for k = 1:lengthPositiveKey
-        if strcmpi(ArticleBody{i},PositiveKey{k}) == 1
+        if strcmpi(ArticleBody(i),PositiveKey{k}) == 1
             positiveCount = positiveCount + 1;  % Positive Articles
         end
     end
@@ -48,3 +50,4 @@ elseif positiveCount < negativeCount
 elseif positiveCount == negativeCount
     rating = 0;
 end
+    
