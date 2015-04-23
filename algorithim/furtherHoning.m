@@ -1,43 +1,52 @@
 %% algoryhtim honing grounds, genetic methods
 
 clear
-%% Authorize
-Quandl.auth('a6WhbJvyBoVA_Czi9oFw');
-%% Generate data
-data = Quandl.get('BCHAIN/MKPRU','collapse','secondly');
-ts = data;
-price = data.Data;
+%% Getting Data
+priceText = fileread('bitcoinPriceData.txt');
+priceText = strsplit(priceText, '\n');
+for d = 1: 365
+    price(d) = str2num(char(priceText(d)));
+end
+
 totalDifference = 0;
 minDif = -1;
 j = 0;
-lastA = price(1832);
-maxSuccess = 0;
+
+sentimentText = fileread('2014Sentiment.txt');
+sentimentText = strsplit(sentimentText, '\n');
+
+for y = 1:365
+    split = strsplit(char(sentimentText(y)), 'e');
+    if (length(split) > 1)
+        firstPart = str2num(char(split(1)));
+        secondPart = str2num(char(split(2)));  
+        sentiment(y) = firstPart * 10.^(secondPart);
+    end
+        sentiment(y) = str2num(char(sentimentText(y)));
+end
+correct = 0;
+MaxRate = 0;
 %% test
-for t = 1:10
-    for c = -10:10
-        for h = 1:10
-            lastP = predictPriceHone(1, price(1832), t, c, h);
-            sameSign = 0;
+for t = 1:5
+    for c = 1:5
+        for h = 1:5
             if t ~= 0
-                for i = 1:356
-                     changeA = price(1832 + i) - lastA;
-                     changeP = predictPriceHone(1, price(1832 + i - 1), t, c, h) - lastP;
-                     if (changeA * changeP) > 0
-                         sameSign = sameSign + 1;
-                     end
-                     lastA = price(1832 + i);
-                     lastP = predictPriceHone(1, price(1832 + i - 1), t, c, h);
-                end
-                successRate = sameSign/365.0;
-                if successRate > maxSuccess
-                    maxSuccess = successRate
-                    maxT = t
-                    maxC = c
-                    maxH = h
+            for i = 2:364
+                changeA = price(i) - price(i-1);
+                changeP = price(i) - predictPriceHone(sentiment(i), price(i), t, c, h);
+                if (changeA * changeP) > 0
+                    correct = correct + 1;
                 end
             end
-            j = j + 1;
-            waitbar(j/2000);
+            successRate = correct/364.0;
+            correct = 0;
+            if successRate > MaxRate
+                MaxRate = successRate
+                minT = t
+                minC = c
+                minH = h
+            end
+            end
         end
     end
 end
